@@ -2,6 +2,7 @@ require 'sinatra'
 require './lib/cuentasBancarias.rb'
 @@miCuenta = Banco.new
 get '/' do
+    @cuentaActual = @@miCuenta.getCuenta()
     erb :formularioCuentas
 end
 
